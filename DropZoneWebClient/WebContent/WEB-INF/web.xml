@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+ 
+   <servlet>
+   <servlet-name>Test Servlet</servlet-name>
+   <servlet-class>za.co.dropzone.thriftservlets.TestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Test Servlet</servlet-name>
+    <url-pattern>/test/*</url-pattern>
+ </servlet-mapping>
+ 
+ 
+    <servlet>
+   <servlet-name>Thrift Servlet</servlet-name>
+   <servlet-class>za.co.dropzone.thriftservlets.ThriftServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Thrift Servlet</servlet-name>
+    <url-pattern>/thrift/*</url-pattern>
+ </servlet-mapping>
+ 
+    <listener>
+		<listener-class>
+			za.co.dropzone.listeners.MyServletAppContextListener 
+		</listener-class>
+   </listener>
+ 
+ </web-app>
